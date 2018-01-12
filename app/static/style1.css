@@ -1,0 +1,29 @@
+body{
+
+background-image: url("students.jpg");
+background-repeat: no-repeat;
+background-size: 100%;
+}
+
+
+
+input[type=text]{
+	background-color: white;
+	color: black;
+	border: solid dodgerblue;
+	padding: 4px;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+input[type=submit]{
+    background-size: 100%;
+    background: url('paper.png') no-repeat right top;
+    padding-left: 64px;
+    padding-top: 32px;
+
+}
+input[type=text]:focus {
+	background-color: #f9ebf2;
+
+
+}

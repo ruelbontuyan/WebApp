@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+
+
+<body>
+	<br><br><br>
+	<div style="float:right; width:790px; margin:0 auto;">
+			<form>
+			<input type="button" value="Back" onclick="history.back()">
+			</input>
+			</form>
+			</div>
+	<div style="width:346px; margin:0 auto;"><form action="/">
+    	<input type="submit" value="Home" />
+		</form></div>
+
+
+
+        <table border = 1 style="margin: auto;">
+	<thead>
+	<td bgcolor="#f9ebf2"><font color="dodgerblue">Course Id</font></td>
+	<td bgcolor="#f9ebf2"><font color="dodgerblue">Course name</font></td>
+	<td bgcolor="#f9ebf2"><font color="dodgerblue">Course Code</font></td>
+
+	</thead>
+		{% for stud in studs %}
+		<tr>
+			<td bgcolor="#f9ebf2"><font color="dodgerblue">{{stud["courseNum"]}}</font></td>
+			<td bgcolor="#f9ebf2"><font color="dodgerblue">{{stud["coursename"]}}</font></td>
+			<td bgcolor="#f9ebf2"><font color="dodgerblue">{{stud["coursecode"]}}</font></td>
+
+		</tr>
+		{% endfor %}<br>
+
+
+	</table>
+
+
+
+
+
+</body>
+
+
+
+</html>

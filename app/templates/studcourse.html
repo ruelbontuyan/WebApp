@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+        <table  border = 1 style="margin: auto;">
+	<thead>
+    <td bgcolor="#f9ebf2"><font color="dodgerblue">Course</font></td>
+    <td bgcolor="#f9ebf2"><font color="dodgerblue">ID Number</font></td>
+    <td bgcolor="#f9ebf2"><font color="dodgerblue">First name</font></td>
+    <td bgcolor="#f9ebf2"><font color="dodgerblue">Middle name</font></td>
+    <td bgcolor="#f9ebf2"><font color="dodgerblue">Last name</font></td>
+    <td bgcolor="#f9ebf2"><font color="dodgerblue">Sex</font></td>
+
+	</thead>
+		{% for stud in studs %}
+		<tr>
+            <td bgcolor="#f9ebf2"><font color="dodgerblue">{{stud["coursename"]}}</font></td>
+            <td bgcolor="#f9ebf2"><font color="dodgerblue">{{stud["idnum"]}}</font></td>
+            <td bgcolor="#f9ebf2"><font color="dodgerblue">{{stud["fname"]}}</font></td>
+            <td bgcolor="#f9ebf2"><font color="dodgerblue">{{stud["mname"]}}</font></td>
+            <td bgcolor="#f9ebf2"><font color="dodgerblue">{{stud["lname"]}}</font></td>
+            <td bgcolor="#f9ebf2"><font color="dodgerblue">{{stud["sex"]}}</font></td>
+		</tr>
+		{% endfor %}
+        <br><div style="width:528px; margin:0 auto;"><form action="/">
+        <input type="submit" value="Home" />
+        </form></div><br>
+
+	</table>
+
+
+
+
+</body>
+
+
+
+</html>

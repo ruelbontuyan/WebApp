@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Student Database</title>
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+
+
+<font color="white"><form action = "/searchGet" method = "POST">
+<input type = "text" name="search"> <input type="submit" value="Search" />  Search Student <br>
+</form></font>
+<font color="#1e90ff"><div class="container">
+    {% include 'message.html' %}
+    {% block body %}{% endblock%}
+</div> </font>
+</form>
+<div class="container" align="center">
+<br><br><br> <form action="/view">
+    <input type="submit" value="View Student" />
+    </form><br>
+    <form action="/studentCourse">
+    <input type="submit" value="View Student with Courses" />
+    </form><br>
+    <form action="/adder">
+    <input type="submit" value="Add Student" /><br>
+    </form><br>
+    <form action="/deletepage">
+    <input type="submit" value="Delete Student" /><br>
+    </form><br>
+    <form action="/updateGet">
+    <input type="submit" value="Update Student" /><br>
+    </form><br>
+    <form action="/addercourse">
+    <input type="submit" value="Add Course" /><br>
+    </form><br>
+     <form action="/viewCourse">
+    <input type="submit" value="View Course" />
+    </form><br>
+    <form action="/deleteCourse">
+    <input type="submit" value="Delete Course" />
+    </form><br>
+    <form action="/updateGetCourse">
+    <input type="submit" value="Update Course" /><br>
+    </form><br>
+</div>
+
+
+
+
+
+
+</body>
+
+
+
+</html>
